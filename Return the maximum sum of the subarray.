@@ -1,0 +1,15 @@
+function find_maximum_subarray(arr,length){
+  
+      var max_sum = arr[0]
+    for(var i=0; i<length; i++){
+        var prev_sum=0
+        for(var j=i; j<length; j++){
+            prev_sum = prev_sum+ arr[j]
+            if(prev_sum>max_sum){
+                max_sum= prev_sum;
+            }
+        }
+    }
+    return (max_sum)
+    
+    
