@@ -1,0 +1,34 @@
+var runningSum = function(nums) {
+    var sum =0;
+    var runningSum = []
+    for(var i =0; i<nums.length; i++){
+        for(var j=0; j<=i; j++){
+            sum = sum+nums[j];
+        }
+            runningSum.push(sum)
+                                          sum=0
+    }
+    return (runningSum)
+     let inputString = '';
+        var output=[];
+        process.stdin.on('data', inputStdin => {
+            inputString += inputStdin;
+            const inputArr = inputString.split(/(?:\r\n|\r|\n)/g)
+            var nums=[];
+            for(var i=0;i<parseInt(inputArr[0]);i++)
+            {
+                nums.push(parseInt(inputArr[i+1]))
+            }
+            output = runningSum(nums)
+            var str="";
+            for(var i=0; i<output.length;i++)
+            {
+                str=str+output[i]+" ";
+            }  
+            console.log(str);
+            process.exit();
+            
+        })
+     readInput();   
+
+}
