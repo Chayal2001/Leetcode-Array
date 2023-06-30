@@ -1,0 +1,11 @@
+var missing_elements = function(arr) {
+    let sum=0;
+    let n=arr.length+1;
+    let r =n*(n+1)/2;
+    for(let i=0;i<arr.length;i++){
+        sum=sum+arr[i];
+        
+    }
+    return r-sum;
+    
+};
