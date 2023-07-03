@@ -1,0 +1,19 @@
+function sort_array(arr,length){
+/*Function to sort the array in descending order
+After sorting return the sorted array */
+
+for(var i =0; i<length; i++){
+    var min = i;
+    for(var j=i+1; j<length; j++){
+        if(arr[j]>arr[min]){
+            min=j;
+        }
+    }
+    if(i!=min){
+        var temp = arr[i];
+        arr[i]= arr[min]
+        arr[min]= temp;
+    }
+}
+return arr;
+}
